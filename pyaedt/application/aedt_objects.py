@@ -51,7 +51,7 @@ class AedtObjects(object):
         """
         if self.design_type == "HFSS" and self.odesign.GetSolutionType() not in ["EigenMode", "Characteristic Mode"]:
             return self.odesign.GetModule("RadField")
-        elif self.design_type == "HFSS3DLayout"
+        elif self.design_type == "HFSS3DLayout":
             return self.odesign.GetModule("RadiationSetupMgr")
         return None
 
