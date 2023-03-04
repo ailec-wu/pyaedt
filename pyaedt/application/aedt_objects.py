@@ -49,7 +49,7 @@ class AedtObjects(object):
 
         >>> oDesign.GetModule("RadField")
         """
-        if self.design_type == "HFSS" and self.odesign.GetSolutionType() not in ["EigenMode", "Characteristic Mode"]:
+        if (self.design_type == "HFSS" or self.design_type == "HFSS3DLayout") and self.odesign.GetSolutionType() not in ["EigenMode", "Characteristic Mode"]:
             return self.odesign.GetModule("RadField")
         return None
 
